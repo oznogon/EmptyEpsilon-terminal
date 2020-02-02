@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.terminal-2.12.0.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.terminal.min.css"/>
+  </head>
+  <body>
+    <script>
+      $(function() {
+        $('body').terminal(function(command, term) {
+          return $.post('http://localhost:8080/exec.lua', command);
+        }, {
+          prompt: '>> ',
+          greetings: 'EmptyEpsilon exec.lua terminal assuming httpserver=8080 and localhost:8080'
+        });
+      });
+    </script>
+  </body>
+</html>
