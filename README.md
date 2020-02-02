@@ -21,3 +21,5 @@ For example:
 >> return getPlayerShip(-1):getCallSign()
 "PL4"
 ```
+
+![Screenshot](terminal.png)
